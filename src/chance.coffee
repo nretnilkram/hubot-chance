@@ -17,8 +17,7 @@ diceValues = ['1', '2', '3', '4', '5', '6']
 coinValues = ['heads', 'tails']
 
 module.exports = (robot) ->
-  robot.respond /roll di/i, (msg) ->
-    count = if msg.match[1]? then parseInt(msg.match[1], 10) else 1
+  robot.respond /(roll di)?/i, (msg) ->
     msg.send msg.random diceValues
 
   robot.respond /roll( \d+)? dice/i, (msg) ->
