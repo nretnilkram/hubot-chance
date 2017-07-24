@@ -1,0 +1,33 @@
+{
+  "name": "hubot-chance",
+  "description": "A hubot script that responds based on chance",
+  "version": "0.1.0",
+  "author": "Nretnil Kram <signkram@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "hubot",
+    "hubot-scripts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nretnilkram/hubot-chance.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nretnilkram/hubot-chance/issues"
+  },
+  "dependencies": {
+    "coffee-script": "~1.6"
+  },
+  "devDependencies": {
+    "chai": "^2.1.1",
+    "hubot": "2.x",
+    "matchdep": "~0.3.0",
+    "mocha": "^2.1.0",
+    "sinon": "^1.13.0",
+    "sinon-chai": "^2.7.0"
+  },
+  "main": "index.coffee",
+  "scripts": {
+    "test": "script/test || true"
+  }
+}
