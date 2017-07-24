@@ -16,3 +16,18 @@ describe 'hubot-chance', ->
 		expect(@robot.respond).to.have.been.calledWith sinon.match( (val) ->
 			val.test /roll di/
 		)
+
+	it 'responds to "roll dice"', ->
+		expect(@robot.respond).to.have.been.calledWith sinon.match( (val) ->
+			val.test /roll dice/
+		)
+
+	it 'responds to "roll n dice"', ->
+		expect(@robot.respond).to.have.been.calledWith sinon.match( (val) ->
+			val.test /roll 5 dice/
+		)
+
+	it 'responds to "flip coin"', ->
+		expect(@robot.respond).to.have.been.calledWith sinon.match( (val) ->
+			val.test /flip coin/
+		)
