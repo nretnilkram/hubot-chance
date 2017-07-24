@@ -8,20 +8,34 @@ See [`src/chance.coffee`](src/chance.coffee) for full documentation.
 
 In hubot project repo, run:
 
-`npm install https://github.com/nretnilkram/hubot-cah.git --save`
+`npm install https://github.com/nretnilkram/hubot-chance.git --save`
 
-Then add **hubot-cah** to your `external-scripts.json`:
+Then add **hubot-chance** to your `external-scripts.json`:
 
 ```json
-["hubot-cah"]
+["hubot-chance"]
 ```
-
-## Configuration
-Set environment variable `HUBOT_CAH_HEAR` to true if you want hubot to listen for commands instead of responding to them
 
 ## Sample Interaction
 
 ```
-user1>> hubot black card
-hubot>> I like _ with my icecream
+user1>> hubot roll di
+hubot>> 6
+```
+```
+user1>> hubot roll dice
+hubot>> 6
+hubot>> 3
+```
+```
+user1>> hubot roll 5 dice
+hubot>> 6
+hubot>> 6
+hubot>> 5
+hubot>> 3
+hubot>> 1
+```
+```
+user1>> hubot flip a coin
+hubot>> tails
 ```

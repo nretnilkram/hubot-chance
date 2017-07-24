@@ -25,5 +25,5 @@ module.exports = (robot) ->
     count = if msg.match[1]? then parseInt(msg.match[1], 10) else 2
     msg.send msg.random diceValues for i in [1..count]
 
-  robot.respond /flip coin/i, (msg) ->
+  robot.respond /flip( a)? coin/i, (msg) ->
     msg.send msg.random coinValues

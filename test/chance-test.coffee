@@ -31,3 +31,8 @@ describe 'hubot-chance', ->
 		expect(@robot.respond).to.have.been.calledWith sinon.match( (val) ->
 			val.test /flip coin/
 		)
+
+	it 'responds to "flip a coin"', ->
+		expect(@robot.respond).to.have.been.calledWith sinon.match( (val) ->
+			val.test /flip a coin/
+		)
