@@ -15,10 +15,9 @@
   "bugs": {
     "url": "https://github.com/nretnilkram/hubot-chance/issues"
   },
-  "dependencies": {
-    "coffee-script": "~1.6"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "coffee-script": "^1.12",
     "hubot": "2.x",
     "chai": "^4.1.0",
     "matchdep": "~1.0.1",
