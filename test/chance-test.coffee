@@ -9,7 +9,6 @@ describe 'hubot-chance', ->
 		@robot =
 			respond: sinon.spy()
 			hear: sinon.spy()
-
 		require('../src/chance')(@robot)
 
 	it 'responds to "roll di"', ->
