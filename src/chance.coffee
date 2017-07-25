@@ -17,7 +17,7 @@ diceValues = ['1', '2', '3', '4', '5', '6']
 coinValues = ['heads', 'tails']
 
 module.exports = (robot) ->
-  robot.respond /(roll di)/i, (msg) ->
+  robot.respond /roll di[^ce]/i, (msg) ->
     msg.send msg.random diceValues
 
   robot.respond /roll( \d+)? dice/i, (msg) ->
