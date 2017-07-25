@@ -27,11 +27,16 @@ describe 'hubot-chance', ->
 		)
 
 	it 'responds to "flip coin"', ->
-		expect(@robot.respond).to.have.been.calledWith sinon.match( (val) ->
+		expect(@robot.hear).to.have.been.calledWith sinon.match( (val) ->
 			val.test /flip coin/
 		)
 
 	it 'responds to "flip a coin"', ->
-		expect(@robot.respond).to.have.been.calledWith sinon.match( (val) ->
+		expect(@robot.hear).to.have.been.calledWith sinon.match( (val) ->
 			val.test /flip a coin/
+		)
+
+	it 'responds to "coin flip"', ->
+		expect(@robot.hear).to.have.been.calledWith sinon.match( (val) ->
+			val.test /coin flip/
 		)

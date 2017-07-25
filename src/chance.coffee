@@ -8,7 +8,7 @@
 #   hubot roll di - Returns number between 1 and 6
 #   hubot roll dice - Returns 2 numbers between 1 and 6
 #   hubot roll n dice - Returns n numbers between 1 and 6
-#   hubot flip coin - Returns heads or tails
+#   flip a coin / flip coin / coin flip - Returns heads or tails
 #
 # Author:
 #   nrentnilkram
@@ -24,5 +24,8 @@ module.exports = (robot) ->
     count = if msg.match[1]? then parseInt(msg.match[1], 10) else 1
     msg.send msg.random diceValues for i in [1..count]
 
-  robot.respond /flip( a)? coin/i, (msg) ->
+  robot.hear /flip( a)? coin/i, (msg) ->
+    msg.send msg.random coinValues
+
+  robot.hear /coin flip/i, (msg) ->
     msg.send msg.random coinValues

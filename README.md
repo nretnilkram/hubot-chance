@@ -36,6 +36,14 @@ hubot>> 3
 hubot>> 1
 ```
 ```
-user1>> hubot flip a coin
+user1>> flip a coin
 hubot>> tails
+```
+```
+user1>> flip coin
+hubot>> heads
+```
+```
+user1>> coin flip
+hubot>> heads
 ```
