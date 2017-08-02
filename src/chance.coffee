@@ -15,6 +15,13 @@
 
 diceValues = ['1', '2', '3', '4', '5', '6']
 coinValues = ['heads', 'tails']
+suite = ['Hearts','Diamonds','Spades','Clubs']
+value = ['Ace','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Jack','Queen','King']
+deckOfCards = []
+
+for x in suite
+  for y in value
+    deckOfCards.push y + ' of ' + x
 
 module.exports = (robot) ->
   robot.respond /roll di/i, (msg) ->
@@ -29,3 +36,6 @@ module.exports = (robot) ->
 
   robot.hear /coin flip/i, (msg) ->
     msg.send msg.random coinValues
+
+  robot.hear /choose a card/i, (msg) ->
+    msg.send msg.random deckOfCards

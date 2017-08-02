@@ -40,3 +40,8 @@ describe 'hubot-chance', ->
 		expect(@robot.hear).to.have.been.calledWith sinon.match( (val) ->
 			val.test /coin flip/
 		)
+
+	it 'responds to "choose a card"', ->
+		expect(@robot.hear).to.have.been.calledWith sinon.match( (val) ->
+			val.test /choose a card/
+		)
