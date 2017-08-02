@@ -40,4 +40,4 @@ module.exports = (robot) ->
   robot.hear /choose a card/i, (msg) ->
     card = msg.random deckOfCards
     msg.send card
-    msg.send 'http://nretnil.com/deck/' + card.toLowerCase().replace /\s+/g, "_"
+    msg.send 'http://nretnil.com/deck/' + card.toLowerCase().replace /\s+/g, "_" + '.png'
