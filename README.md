@@ -16,6 +16,13 @@ Then add **hubot-chance** to your `external-scripts.json`:
 ["hubot-chance"]
 ```
 
+## Heroku Configuration
+
+```
+heroku config:set HUBOT_CHANCE_HEAR=true
+heroku config:set HUBOT_CHANCE_INCLUDE_TEXT=true
+```
+
 ## Sample Interaction
 
 ```
@@ -36,14 +43,19 @@ hubot>> 3
 hubot>> 1
 ```
 ```
-user1>> flip a coin
+user1>> hubot flip a coin
 hubot>> tails
 ```
 ```
-user1>> flip coin
+user1>> hubot flip coin
 hubot>> heads
 ```
 ```
-user1>> coin flip
+user1>> hubot coin flip
 hubot>> heads
+```
+
+```
+user1>> hubot choose a card
+hubot>> 4 of Spades
 ```
