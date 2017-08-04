@@ -1,7 +1,7 @@
 {
   "name": "hubot-chance",
   "description": "A hubot script that responds based on chance",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "author": "Nretnil Kram <signkram@gmail.com>",
   "license": "MIT",
   "keywords": [
