@@ -47,22 +47,23 @@ selectDi = (msg) ->
   msg.send 'http://www.nretnil.com/stock/di/' + di + '.png'
 
 module.exports = (robot) ->
-  robot.respond /roll di/i, (msg) ->
-    selectDi msg
-
-  robot.respond /roll( \d+)? dice/i, (msg) ->
-    count = if msg.match[1]? then parseInt(msg.match[1], 10) else 1
-    for i in [1..count]
+  if !process.env.HUBOT_CHANCE_HEAR?
+    robot.respond /roll di/i, (msg) ->
       selectDi msg
 
-  robot.respond /flip( a)? coin/i, (msg) ->
-    selectCoin msg
+    robot.respond /roll( \d+)? dice/i, (msg) ->
+      count = if msg.match[1]? then parseInt(msg.match[1], 10) else 1
+      for i in [1..count]
+        selectDi msg
 
-  robot.respond /coin flip/i, (msg) ->
-    selectCoin msg
+    robot.respond /flip( a)? coin/i, (msg) ->
+      selectCoin msg
 
-  robot.respond /choose a card/i, (msg) ->
-    selectCard msg
+    robot.respond /coin flip/i, (msg) ->
+      selectCoin msg
+
+    robot.respond /choose a card/i, (msg) ->
+      selectCard msg
 
 # pro feature, not added to docs since you can't conditionally document commands
   if process.env.HUBOT_CHANCE_HEAR?
