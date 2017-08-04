@@ -31,7 +31,7 @@ module.exports = (robot) ->
     di = msg.random diceValues
     if process.env.HUBOT_CHANCE_INCLUDE_TEXT?
       msg.send di
-    msg.send msg.send 'http://www.nretnil.com/stock/di/' + di + '.png'
+    msg.send 'http://www.nretnil.com/stock/di/' + di + '.png'
 
   robot.respond /roll( \d+)? dice/i, (msg) ->
     count = if msg.match[1]? then parseInt(msg.match[1], 10) else 1
@@ -39,19 +39,19 @@ module.exports = (robot) ->
       di = msg.random diceValues
       if process.env.HUBOT_CHANCE_INCLUDE_TEXT?
         msg.send di
-      msg.send msg.send 'http://www.nretnil.com/stock/di/' + di + '.png'
+      msg.send 'http://www.nretnil.com/stock/di/' + di + '.png'
 
   robot.hear /flip( a)? coin/i, (msg) ->
     side = msg.random coinValues
     if process.env.HUBOT_CHANCE_INCLUDE_TEXT?
       msg.send side
-    msg.send msg.send 'http://www.nretnil.com/stock/coins/penny/' + side + '.png'
+    msg.send 'http://www.nretnil.com/stock/coins/penny/' + side + '.png'
 
   robot.hear /coin flip/i, (msg) ->
     side = msg.random coinValues
     if process.env.HUBOT_CHANCE_INCLUDE_TEXT?
       msg.send side
-    msg.send msg.send 'http://www.nretnil.com/stock/coins/penny/' + side + '.png'
+    msg.send 'http://www.nretnil.com/stock/coins/penny/' + side + '.png'
 
   robot.hear /choose a card/i, (msg) ->
     card = msg.random deckOfCards
