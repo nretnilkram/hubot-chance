@@ -9,6 +9,7 @@
 #   hubot roll dice - Returns 2 numbers between 1 and 6
 #   hubot roll n dice - Returns n numbers between 1 and 6
 #   hubot flip a coin / flip coin / coin flip - Returns heads or tails
+#   hubot choose / pick a card - Returns a random playing card from a full deck each time.
 #
 # Configuration:
 #   HUBOT_CHANCE_INCLUDE_TEXT - Optional. If set, text will accompany the image for choose a card, flip a coin, and roll a dice.
@@ -62,7 +63,7 @@ module.exports = (robot) ->
     robot.respond /coin flip/i, (msg) ->
       selectCoin msg
 
-    robot.respond /choose a card/i, (msg) ->
+    robot.respond /(choose|pick) a card/i, (msg) ->
       selectCard msg
 
 # pro feature, not added to docs since you can't conditionally document commands
@@ -81,5 +82,5 @@ module.exports = (robot) ->
     robot.hear /coin flip/i, (msg) ->
       selectCoin msg
 
-    robot.hear /choose a card/i, (msg) ->
+    robot.hear /(choose|pick) a card/i, (msg) ->
       selectCard msg
