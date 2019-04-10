@@ -68,19 +68,19 @@ module.exports = (robot) ->
 
   # Optional feature, not added to docs since you can't conditionally document commands
   if process.env.HUBOT_CHANCE_HEAR
-    robot.hear /roll di/i, (msg) ->
+    robot.hear /^roll di/i, (msg) ->
       selectDi msg
 
-    robot.hear /roll( \d+)? dice/i, (msg) ->
+    robot.hear /^roll( \d+)? dice/i, (msg) ->
       count = if msg.match[1]? then parseInt(msg.match[1], 10) else 1
       for i in [1..count]
         selectDi msg
 
-    robot.hear /flip( a)? coin/i, (msg) ->
+    robot.hear /^flip( a)? coin/i, (msg) ->
       selectCoin msg
 
-    robot.hear /coin flip/i, (msg) ->
+    robot.hear /^coin flip/i, (msg) ->
       selectCoin msg
 
-    robot.hear /(choose|pick) a card/i, (msg) ->
+    robot.hear /^(choose|pick) a card/i, (msg) ->
       selectCard msg
