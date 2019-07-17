@@ -67,7 +67,7 @@ module.exports = (robot) ->
     selectCard msg
 
   # Optional feature, not added to docs since you can't conditionally document commands
-  if process.env.HUBOT_CHANCE_HEAR
+  if process.env.HUBOT_CHANCE_HEAR == "true"
     robot.hear /^roll di/i, (msg) ->
       selectDi msg
 
