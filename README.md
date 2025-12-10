@@ -2,7 +2,7 @@
 
 A hubot script that returns based on chance
 
-See [`src/chance.coffee`](src/chance.coffee) for full documentation.
+See [`src/chance.js`](src/chance.js) for full documentation.
 
 ## Installation
 
