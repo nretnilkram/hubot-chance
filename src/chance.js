@@ -55,7 +55,7 @@ const selectDi = (msg) => {
   msg.send('http://www.nretnil.com/stock/di/' + di + '.png');
 };
 
-module.exports = (robot) => {
+export default (robot) => {
   robot.respond(/roll di/i, (msg) => {
     selectDi(msg);
   });

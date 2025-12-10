@@ -1,16 +1,18 @@
-const chai = require('chai');
-const sinon = require('sinon');
-chai.use(require('sinon-chai'));
+import { expect, use } from 'chai';
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+use(sinonChai);
 
-const expect = chai.expect;
+
 
 describe('hubot-chance', () => {
-  beforeEach(function() {
+  beforeEach(async function() {
     this.robot = {
       respond: sinon.spy(),
       hear: sinon.spy()
     };
-    require('../src/chance')(this.robot);
+    const chanceModule = await import('../src/chance.js');
+    chanceModule.default(this.robot);
   });
 
   it('responds to "roll di"', function() {
